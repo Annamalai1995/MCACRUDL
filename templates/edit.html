@@ -1,0 +1,47 @@
+{%extends 'navigation.html'%}
+{%block annamalai%}
+    <div class="col-12 col-sm-12 col-md-8 col-lg-6 shadow-lg p-4">
+        <form action="/update/{{data.model}}" method="post">
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-6 col-md-6">
+                    <label>Laptop Model Name</label>
+                    <input value="{{data.model}}" readonly type="text" name="model" placeholder="Laptop model" class="form-control"/>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6">
+                    <label>Laptop Serial Number</label>
+                    <input value="{{data.serial}}" type="text" name="serial" placeholder="Laptop serial" class="form-control"/>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-6 col-md-6">
+                    <label>Laptop RAM Capacity</label>
+                    <input value="{{data.ram}}" type="text" name="ram" placeholder="Laptop RAM" class="form-control"/>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6">
+                    <label>Laptop SSD capacity</label>
+                    <input value="{{data.ssd}}" type="text" name="ssd" placeholder="Laptop SSD" class="form-control"/>
+                </div>
+            </div>
+            <div class="form group">
+                <label>Laptop Usage type</label>
+                <input value="{{data.type}}" type="text" name="type" placeholder="Laptop type" class="form-control" />
+            </div>
+            <div class="form group">
+                <label>Laptop Stock quantity</label>
+                <input value="{{data.stock}}" type="text" name="stock" placeholder="Laptop Stock" class="form-control" />
+            </div>
+            <div class="form group">
+                <label>Laptop Price</label>
+                <input value="{{data.price}}" type="text" name="price" placeholder="Laptop price" class="form-control" />
+            </div>
+            <div class="row mt-5 justify-content-evenly">
+                <button type="submit" class="btn btn-outline-success rounded-pill col-2">
+                    <h3 class="bi bi-cloud-upload-fill"></h3>
+                </button>
+                <button type="reset" class="btn btn-outline-dark rounded-pill col-2">
+                    <h3 class="bi bi-x-circle-fill"></h3>
+                </button>
+            </div>
+        </form>
+    </div>
+{%endblock%}
